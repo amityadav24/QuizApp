@@ -1,0 +1,291 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eaf6ff;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.1);
+    text-align: center;
+    display: none;
+    animation: fadeIn 0.6s ease;
+}
+
+/* Display start screen by default */
+#start-screen {
+    display: block;
+}
+
+/* Headings */
+h1 {
+    color: #007bff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h2,
+h3 {
+    color: #004085;
+    margin: 15px 0;
+}
+
+/* Dropdown */
+#category-select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Start Button - Green */
+#start-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#start-btn:hover {
+    background-color: #218838;
+}
+
+/* Question */
+#question-box {
+    margin: 20px 0;
+    font-size: 20px;
+    color: #0056b3;
+}
+
+/* Options */
+#options-box button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+    color: #0056b3;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#options-box button:hover {
+    background-color: #d0e8ff;
+}
+
+/* Timer */
+#timer {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3399ff;
+    /* Bluish bold tone */
+}
+
+/* Score */
+#score {
+    font-weight: bold;
+    color: #007bff;
+    font-size: 24px;
+}
+
+/* Leaderboard */
+#leaderboard {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#leaderboard li {
+    padding: 10px;
+    background: #f1f9ff;
+    border-radius: 6px;
+    margin: 6px 0;
+    font-size: 16px;
+    color: #004085;
+}
+
+/* Retry Button */
+#result-screen button {
+    margin-top: 20px;
+    padding: 10px 22px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#result-screen button:hover {
+    background-color: #0056b3;
+}
+
+/* Progress Bar */
+#progress-container {
+    width: 100%;
+    background-color: #d6eaff;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 15px;
+    margin-top: 20px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #007bff;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #867777;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-switch .slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.toggle-switch .slider::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    transition: 0.3s;
+}
+
+.toggle-switch input:checked+.slider {
+    background-color: #007bff;
+}
+
+.toggle-switch input:checked+.slider::before {
+    transform: translateX(20px);
+}
+
+/* Dark Mode Enhancements */
+body.dark {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark .container {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark #question-box,
+body.dark #leaderboard li,
+body.dark #timer {
+    color: #cce6ff;
+}
+
+body.dark #start-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+body.dark #result-screen button {
+    background-color: #0d6efd;
+}
+
+body.dark #options-box button {
+    background-color: #3d3d3d;
+    color: #e0f2ff;
+    border-color: #3399ff;
+}
+
+body.dark #options-box button:hover {
+    background-color: #5c5c5c;
+}
+
+body.dark #progress-container {
+    background-color: #444;
+}
+
+body.dark #progress-bar {
+    background-color: #66b2ff;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    #start-btn,
+    #result-screen button {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    #options-box button {
+        font-size: 15px;
+    }
+}

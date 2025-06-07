@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Start Screen -->
+    <div class="container" id="start-screen">
+        <h1>Welcome to Ultimate - Quiz - App 🚀</h1>
+
+        <select id="category-select">
+            <option value="">-- Select Category --</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="General">General</option>
+        </select>
+
+        <button id="start-btn">Start Quiz</button>
+
+        <label class="toggle-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+            <span>Dark Mode</span>
+        </label>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div class="container" id="quiz-screen">
+        <h2 id="question-box"></h2>
+        <div id="options-box"></div>
+
+        <div id="timer">
+            Time Left: <span id="time">10</span>
+        </div>
+
+        <div id="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div class="container" id="result-screen">
+        <h2>Quiz Completed</h2>
+        <h3>Your Score: <span id="score"></span></h3>
+
+        <h3>Leaderboard</h3>
+        <ul id="leaderboard"></ul>
+
+        <button onclick="location.reload()">Reattempt Quiz</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="question.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
